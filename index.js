@@ -1,55 +1,31 @@
-let humanScore = 0;
-let computerScore =0;
+function getComputerChoice() {
 
-function getCompureChoice() {
-    let value=Math.random()
-    let choice;
-
-    if (value <=0.5)
-    {choice='Paper'}
-
-    else if (value>0.5 && <=1)
-        choice {'Rock'}
-
-    else 
-    {choice='Scissors'}
-    return choice;
+    let computerChoice = Math.random()
+    if (computerChoice <=0.5) {
+        return "rock";
+    } 
+    else if (computerChoice >=0.6) {
+return "paper";}
+    else {
+        return "scissors";
+    }
 }
-
 function getHumanChoice() {
-    let input = prompt('Rock, Paper or Scissors?');
-    input=input.toLowerCase();
-    return input;
-}
-function playRound(HumanChoice, CompureChoice) {
+    let humanChoice = prompt("Please enter rock, paper or scissors").toLowerCase();
+    if (humanChoice === 'rock' || humanChoice === 'paper' || humanChoice === 'scissors') {
+        return humanChoice;
+    }
+    else { console.log("please enter a valid choice");
+        return null;
 
-    if (HumanChoice==='Rock' && CompureChoice==='Scissors'){
-        humanScore++;
-        alert(`Your Choice:${HumanChoice} Computer Choice: ${CompureChoice} 
-            You Win!`);
     }
-    else if (HumanChoice==='Rock' && CompureChoice==='Paper'){
-        computerScore++;
-        alert(`Your Choice: ${HumanChoice} Computer Choice: ${CompureChoice}
-            You Loose!`);
-    }
-    else if (HumanChoice==='Rock' && CompureChoice==='Rock'){
-        alert(`Your Choice: ${HumanChoice} Computer Choice: ${CompureChoice}
-            You Tie`);
-            
-    }
-else if (HumanChoice==='Scissors' && CompureChoice==='Rock'){
-    computerScore++;
-    alert(`Your Choice: ${HumanChoice} Computer Choice: ${CompureChoice}
-        You Loose!`);
 }
-else if (HumanChoice==='Scissors' && CompureChoice==='Paper'){
-    humanScore++;
-    alert(`Your Choice: ${HumanChoice} Computer Choice: ${CompureChoice}
-        You Win!`);
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound( humanChoice, computerChoice ) {
+    let result;
+
+
 }
-if else (HumanChoice==='Scissors' && CompureChoice==='Scissors'){
-    alert(`Your Choice: ${HumanChoice} Computer Choice: ${CompureChoice}
-        You Tie`);  
-}
-}
+

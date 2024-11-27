@@ -56,14 +56,14 @@ function playGame() {
 
 
     if ( humanScore > computerScore) {
-        console.log("CONGRATULATION, YOU WIN!");
+        console.log("CONGRATULATION, YOU WIN! REFRESH TO START A NEW GAME.");
     }
     else if (computerScore > humanScore) {
     
-        console.log("YOU LOOSE!");
+        console.log("YOU LOOSE! REFRESH TO START A NEW GAME");
     }
     else { 
-        console.log("YOU TIE!");
+        console.log("YOU TIE! REFRESH TO START A NEW GAME");
     }
 
 }

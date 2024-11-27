@@ -1,10 +1,10 @@
 function getComputerChoice() {
 
     let computerChoice = Math.random()
-    if (computerChoice <=0.5) {
+    if (computerChoice <=0.33) {
         return "rock";
     } 
-    else if (computerChoice >=0.6) {
+    else if (computerChoice >=0.66) {
 return "paper";}
     else {
         return "scissors";
@@ -55,16 +55,19 @@ function playGame() {
 
 
 
-
+    if ( humanScore > computerScore) {
+        console.log("CONGRATULATION, YOU WIN!");
+    }
+    else if (computerScore > humanScore) {
+    
+        console.log("YOU LOOSE!");
+    }
+    else { 
+        console.log("YOU TIE!");
+    }
 
 }
-if ( humanScore > computerScore) {
-    console.log("CONGRATULATION, YOU WIN!");
-}
-else {
 
-    console.log("YOU LOOSE!");
-}
 
 
 playGame();
